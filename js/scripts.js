@@ -21,3 +21,15 @@ var titleCase = function(input) {
     return words.join(" ");
 
 }
+
+$(document).ready(function() {
+    $('form#input').submit(function(event) {
+        var input = $("input#input").val();
+        var result = titleCase(input);
+
+        $("#result").text(result);
+
+        $("#result").show();
+        event.preventDefault();
+    });
+});
